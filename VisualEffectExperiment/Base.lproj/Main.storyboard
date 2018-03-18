@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisualEffectExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="j4k-m1-4xk">
+                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ocP-yb-kn8">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="369"/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="KHt-aq-iPO">
+                                        <rect key="frame" x="0.0" y="377" width="343" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Jo3-Fg-Hce"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="day"/>
+                                            <segment title="cloudy"/>
+                                            <segment title="night"/>
+                                            <segment title="indoor"/>
+                                            <segment title="bad"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="imageSegmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="fEs-pX-yrh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lx6-RF-m6D">
+                                        <rect key="frame" x="0.0" y="415" width="343" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="imageView.alpha = 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr0-u2-pFF">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5EL-zP-ZCh">
+                                                <rect key="frame" x="173.5" y="0.0" width="171.5" height="31"/>
+                                                <color key="tintColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="imageAlphaSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="f5v-g6-oXb"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="uRD-Az-d2H"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DON'T USE ALPHA &lt;1 ON UIVisualEffectViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7d9-Io-JcZ">
+                                        <rect key="frame" x="0.0" y="453" width="343" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="PPA-SM-OrB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-Bo-2BL">
+                                        <rect key="frame" x="0.0" y="491" width="343" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blur.alpha = 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7za-bP-mot">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-zt-r1l">
+                                                <rect key="frame" x="173.5" y="0.0" width="171.5" height="31"/>
+                                                <color key="tintColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="blurAlphaSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="I9E-Mf-lKC"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="kB3-VC-uoD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="4dZ-4p-ClT">
+                                        <rect key="frame" x="0.0" y="529" width="343" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="bDO-lc-tb7"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title=""/>
+                                        </segments>
+                                        <color key="tintColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="topSegmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xsg-TT-l2p"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="dWF-hX-T7X">
+                                        <rect key="frame" x="0.0" y="565" width="343" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="6bP-gd-aqW"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title=""/>
+                                        </segments>
+                                        <color key="tintColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="bottomSegmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="H09-4Y-yVk"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxS-2t-gz3">
+                                        <rect key="frame" x="0.0" y="601" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.89252465960000005" green="0.19938987490000001" blue="0.1230876967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AK4-yg-ClN"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ja5-7n-JuI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j4k-m1-4xk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="GmE-9K-axX"/>
+                            <constraint firstAttribute="trailing" secondItem="j4k-m1-4xk" secondAttribute="trailing" constant="16" id="ffo-y0-xvo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j4k-m1-4xk" secondAttribute="bottom" constant="8" id="nNI-kN-AMx"/>
+                            <constraint firstItem="j4k-m1-4xk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t60-ko-cDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurAlphaLabel" destination="7za-bP-mot" id="fbI-bm-Svh"/>
+                        <outlet property="blurAlphaSlider" destination="mNI-zt-r1l" id="qo4-gZ-H0k"/>
+                        <outlet property="bottomSegmentedControl" destination="dWF-hX-T7X" id="v5y-SC-o07"/>
+                        <outlet property="imageAlphaLabel" destination="Mr0-u2-pFF" id="wYN-O9-xFP"/>
+                        <outlet property="imageAlphaSlider" destination="5EL-zP-ZCh" id="Lwx-Bn-lht"/>
+                        <outlet property="imageSegmentedControl" destination="KHt-aq-iPO" id="Fft-XU-Zx1"/>
+                        <outlet property="imageView" destination="ocP-yb-kn8" id="2hX-zT-pjT"/>
+                        <outlet property="resetButton" destination="VxS-2t-gz3" id="rv7-by-3ft"/>
+                        <outlet property="topSegmentedControl" destination="4dZ-4p-ClT" id="Pme-rz-Pz5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
